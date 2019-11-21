@@ -16,6 +16,7 @@ public class DynamicUICommands : MonoBehaviour
         if(placing)
         {
             //Spatialmapping ON
+            print("Selected");
         }
         else
         {
@@ -34,8 +35,13 @@ public class DynamicUICommands : MonoBehaviour
             var headPosition = Camera.main.transform.position;
             var gazeDirection = Camera.main.transform.forward;
 
-            this.transform.position = gazeDirection;
-            
+            RaycastHit hitInfo;
+            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+            {
+                // Move this object's parent object to
+                // where the raycast hit the Spatial Mapping mesh.
+                this.transform.parent.position = hitInfo.point;
+            }
         }
     }
 }
