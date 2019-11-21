@@ -22,7 +22,7 @@ public class SpatialMapping : MonoBehaviour
     private int physicsLayer = 31;
 
     // Handles rendering of spatial mapping meshes.
-    private SpatialMappingRenderer spatialMappingRenderer;
+    private SpatialMappingRenderer spatialMappingRenderer = new SpatialMappingRenderer();
 
     // Creates/updates environment colliders to work with physics.
     private SpatialMappingCollider spatialMappingCollider;
