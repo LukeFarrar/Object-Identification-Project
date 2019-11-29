@@ -91,29 +91,29 @@ public class FollowAlong : MonoBehaviour
             Ray ray = new Ray(headPosition, gazeDirection);
             RaycastHit hitInfo;
 
-            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo, 10f, SpatialMapping.PhysicsRaycastMask))
             {
-                RaycastHit[] Allhits = Physics.RaycastAll(ray, 100f);
-                foreach (RaycastHit hit in Allhits)
-                {
-                    if (!hit.transform.IsChildOf(this.transform))
-                    {
+                //RaycastHit[] Allhits = Physics.RaycastAll(ray, 100f);
+                //foreach (RaycastHit hit in Allhits)
+                //{
+                    //if (!hit.transform.IsChildOf(this.transform))
+                    //{
                         if (gameObject != this)
                         {
-                            this.transform.position = new Vector3(
+                            this.transform.parent.position = new Vector3(
                             hitInfo.point.x,
                             hitInfo.point.y,
                             hitInfo.point.z
                             );
 
-                            this.transform.position = this.transform.position + gazeDirection * 0.001f;
+                            this.transform.parent.position = this.transform.parent.position - gazeDirection;
 
                             Quaternion toQuat = Camera.main.transform.localRotation;
-                            this.transform.rotation = toQuat;
+                            this.transform.parent.rotation = toQuat;
 
                         }
-                    }
-                }
+                    //}
+                //}
             }
         }
         
