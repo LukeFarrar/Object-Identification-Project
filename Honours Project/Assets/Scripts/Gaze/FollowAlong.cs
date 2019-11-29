@@ -106,7 +106,7 @@ public class FollowAlong : MonoBehaviour
                             hitInfo.point.z
                             );
 
-                            this.transform.parent.position = this.transform.parent.position - gazeDirection;
+                            //this.transform.parent.position = this.transform.parent.position - gazeDirection;
 
                             Quaternion toQuat = Camera.main.transform.localRotation;
                             this.transform.parent.rotation = toQuat;
