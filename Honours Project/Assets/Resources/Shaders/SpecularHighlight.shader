@@ -1,7 +1,8 @@
-﻿// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License. See LICENSE in the project root for license information.
+﻿//
+// Copyright (C) Microsoft. All rights reserved. 
+//
 
-Shader "MixedRealityToolkit/SpecularHighlight"
+Shader "Custom/SpecularHighlight"
 {
     Properties
     {
@@ -13,29 +14,29 @@ Shader "MixedRealityToolkit/SpecularHighlight"
         _Highlight("Highlight", float) = 0.0
     }
 
-    CGINCLUDE
+        CGINCLUDE
 #include "UnityCG.cginc"
 #include "AutoLight.cginc"
 #include "Lighting.cginc"
-    ENDCG
+            ENDCG
 
-    SubShader
-    {
-        Tags { "RenderType" = "Opaque" }
-        LOD 200
-        Pass
+            SubShader
         {
-            Lighting On
-            Tags {"LightMode" = "ForwardBase"}
+            Tags { "RenderType" = "Opaque" }
+            LOD 200
+            Pass
+            {
+                Lighting On
+                Tags {"LightMode" = "ForwardBase"}
 
-            CGPROGRAM
+                CGPROGRAM
 
-            #pragma exclude_renderers gles
-            #pragma vertex vert
-            #pragma fragment frag
-            #pragma multi_compile_fwdbase 
-            #pragma target 5.0
-            #pragma only_renderers d3d11
+                #pragma exclude_renderers gles
+                #pragma vertex vert
+                #pragma fragment frag
+                #pragma multi_compile_fwdbase 
+                #pragma target 5.0
+                #pragma only_renderers d3d11
 
             // Low precision floating point types
             #define lowp min16float
@@ -85,6 +86,7 @@ Shader "MixedRealityToolkit/SpecularHighlight"
                 lowp3 worldNormal : TEXCOORD6;
                 lowp3 reflection : TEXCOORD7;
 #endif
+
             };
 
             v2f vert(appdata_t v)
@@ -138,6 +140,7 @@ Shader "MixedRealityToolkit/SpecularHighlight"
                 return o;
             }
 
+
             lowp4 frag(v2f i) : COLOR
             {
                 lowp attenuation = 1.0f;
@@ -169,6 +172,6 @@ Shader "MixedRealityToolkit/SpecularHighlight"
             }
         ENDCG
         }
-    }
-    Fallback "VertexLit"
+        }
+            Fallback "VertexLit"
 }

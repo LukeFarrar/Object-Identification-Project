@@ -3,7 +3,6 @@
 
 using HoloToolkit.Unity;
 using UnityEngine;
-using UnityEngine.XR;
 using UnityEngine.XR.WSA.Input;
 
 namespace Academy
@@ -33,11 +32,11 @@ namespace Academy
 
         private void Awake()
         {
-            if (Application.isEditor && !XRDevice.isPresent)
+            if (Application.isEditor)
             {
                 // If we are running inside Unity's Editor, disable the Fitbox script
                 // as there is no easy way to dismiss it to see our actual holograms.
-                DestroyImmediate(gameObject);
+                enabled = false;
             }
             else
             {
