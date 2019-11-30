@@ -67,6 +67,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
             /* TODO: DEVELOPER CODING EXERCISE 4.a */
 
             // 4.a: Make this transform's position be the manipulationOriginalPosition + eventData.CumulativeDelta
+            transform.position = manipulationOriginalPosition + eventData.CumulativeDelta;
         }
     }
 
@@ -82,11 +83,11 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
     void ISpeechHandler.OnSpeechKeywordRecognized(SpeechEventData eventData)
     {
-        if (eventData.RecognizedText.Equals("Move Astronaut"))
+        if (eventData.RecognizedText.Equals("Move Box"))
         {
             isNavigationEnabled = false;
         }
-        else if (eventData.RecognizedText.Equals("Rotate Astronaut"))
+        else if (eventData.RecognizedText.Equals("Rotate Box"))
         {
             isNavigationEnabled = true;
         }
