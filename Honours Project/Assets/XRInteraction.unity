@@ -699,6 +699,24 @@ MonoBehaviour:
   - Keyword: Rotate Box
     KeyCode: 0
   recognitionConfidenceLevel: 1
+--- !u!1 &1199262943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9201461193127217094, guid: d29bc40b7f3df26479d6a0aac211c355,
+    type: 3}
+  m_PrefabInstance: {fileID: 1609293774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1199262945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199262943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d70ee6b7c694f4c97404b19f83edb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1343021771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 1000010024638574, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
       propertyPath: m_Name
       value: CursorWithFeedback
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010024638574, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000013243965410, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
       propertyPath: m_LocalPosition.x
@@ -752,6 +774,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013243965410, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1692019640059370, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879782099030682, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1744576705019378, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011704672682, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 240922457721312398, guid: e1db120f67eb5cb41a2dd1dee7447582,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2155462072703859005, guid: e1db120f67eb5cb41a2dd1dee7447582,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011258900396, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365520034809534, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010093781024, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188644988713234, guid: e1db120f67eb5cb41a2dd1dee7447582, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -904,6 +968,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1609504174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1691577034 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1372541880982678, guid: d29bc40b7f3df26479d6a0aac211c355,
+    type: 3}
+  m_PrefabInstance: {fileID: 1609293774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1691577036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691577034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4039b26117926a84980a59bc64820d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 1869554689552952, guid: af3281d0d47e84340abbb624b549db02, type: 3}
+  Locator: {fileID: 2491993559698429474, guid: d717f9363f37a484390eddc70c776db5, type: 3}
+  Cursor: {fileID: 101181596}
 --- !u!1001 &4596376078657542283
 PrefabInstance:
   m_ObjectHideFlags: 0

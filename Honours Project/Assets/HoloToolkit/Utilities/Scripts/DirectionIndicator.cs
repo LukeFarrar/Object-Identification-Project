@@ -162,5 +162,26 @@ namespace HoloToolkit.Unity
             // Find the rotation from the facing direction to the target object.
             rotation = Quaternion.LookRotation(cameraTransform.forward, cursorIndicatorDirection) * directionIndicatorDefaultRotation;
         }
+
+        public void Reinstanciate()
+        {
+            if (Cursor == null)
+            {
+                Debug.LogError("Please include a GameObject for the cursor.");
+            }
+
+            if (DirectionIndicatorObject == null)
+            {
+                Debug.LogError("Please include a GameObject for the Direction Indicator.");
+            }
+
+            // Instantiate the direction indicator.
+            DirectionIndicatorObject = InstantiateDirectionIndicator(DirectionIndicatorObject);
+
+            if (DirectionIndicatorObject == null)
+            {
+                Debug.LogError("Direction Indicator failed to instantiate.");
+            }
+        }
     }
 }

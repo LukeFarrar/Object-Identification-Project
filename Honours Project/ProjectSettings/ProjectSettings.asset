@@ -553,7 +553,7 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
-  metroCertificateNotAfter: 800e5608f9bed601
+  metroCertificateNotAfter: 00b8dbd300d8d601
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: 
@@ -607,7 +607,7 @@ PlayerSettings:
       UserNotificationListener: False
       VideosLibrary: False
       VoipCall: False
-      WebCam: False
+      WebCam: True
   metroTargetDeviceFamilies:
     Desktop: False
     Holographic: False
